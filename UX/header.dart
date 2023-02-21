@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -12,7 +13,7 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Color.fromARGB(255, 13, 1, 106),
       height: 60,
       width: MediaQuery.of(context).size.width,
       child: Row(children: [
@@ -27,11 +28,11 @@ class _HeaderState extends State<Header> {
           width: 10.0,
         ),
         Text(
-          "TestPurpose",
-          style: TextStyle(fontSize: 18.0, color: Colors.white),
+          "Avengers",
+          style: GoogleFonts.numans(fontSize: 18.0, color: Colors.white),
         ),
         SizedBox(
-          width: 200,
+          width: 250,
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,8 +73,8 @@ class _HeaderState extends State<Header> {
           children: [
             Text(
               "Sign up",
-              style: TextStyle(
-                fontSize: 14.0,
+              style: GoogleFonts.nunito(
+                fontSize: 13.0,
                 color: Colors.white,
               ),
             ),
@@ -90,8 +91,8 @@ class _HeaderState extends State<Header> {
             ),
             Text(
               "Log in",
-              style: TextStyle(
-                fontSize: 14.0,
+              style: GoogleFonts.nunito(
+                fontSize: 13.0,
                 color: Colors.white,
               ),
             ),
@@ -123,7 +124,10 @@ class _HeaderNavState extends State<HeaderNav> {
       children: [
         Text(
           widget.text_sample,
-          style: TextStyle(fontSize: 18.0, color: Colors.white),
+          style: GoogleFonts.nunito(
+            fontSize: 13.0,
+            color: Colors.white,
+          ),
         ),
         widget.selected
             ? SizedBox(
@@ -132,7 +136,7 @@ class _HeaderNavState extends State<HeaderNav> {
             : SizedBox(),
         widget.selected
             ? CircleAvatar(
-                radius: 5.0,
+                radius: 2.0,
                 backgroundColor: Colors.white,
               )
             : SizedBox(),
